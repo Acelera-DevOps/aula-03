@@ -30,3 +30,10 @@ output "aws_security_group" {
   description = "esse é o id do security group"
 }
 
+output "subnet_id" {
+  value = aws_subnet.example-subnet.id
+}
+
+output "security_group_id" {
+  value = aws_security_group.allow_acess.id
+}
