@@ -33,6 +33,7 @@ resource "aws_route_table" "rt" {
   vpc_id = aws_vpc.example.id
   route {
     cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.example.id
 }
 }
 
@@ -52,5 +53,5 @@ resource "aws_security_group" "allow_acess" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   
-  }
+}
 }
